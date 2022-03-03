@@ -8,11 +8,32 @@
   transform: translateY(-50%);
 }
 
+body{
+  cursor: url('../../assets/pencil.ico'), default !important;
+}
+.background-image{
+  background-image: url("../../assets/Bg.png");
+  height: 100%;
+}
 #container strong {
   font-size: 20px;
   line-height: 26px;
 }
+.formsDesign{
+  margin-left: auto;
+ margin-right:  auto;
+  margin-top: 10%;
+  width: 70%;
+  border: 2px solid gray;
+  box-shadow: 0em 0em 1em gray;
+}
 
+
+.buttonStyle{
+  width: 100%;
+  margin: 10px!important;
+  height: 3em!important;
+}
 #container p {
   font-size: 16px;
   line-height: 22px;

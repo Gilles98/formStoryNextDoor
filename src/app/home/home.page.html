@@ -1,4 +1,36 @@
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
+<ion-grid class="ion-text-center background-image" >
+  <ion-row>
+<ion-col class="ion-align-self-center">
+  <form class="formsDesign">
+    <ion-item lines="full" >
+      <h2>Submit your story!</h2>
+      <ion-label position="floating"><ion-icon name="mail-outline"></ion-icon> Fill in your e-mail!</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="text" required></ion-input>
+    </ion-item>
 
+    <ion-item lines="full">
+      <ion-label position="floating"> <ion-icon name="people-circle-outline"></ion-icon> What's your name?</ion-label>
+      <ion-input [(ngModel)]="naam" name="name" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label> <ion-icon name="shield-checkmark-outline"></ion-icon> Can we mention you?</ion-label>
+      <ion-checkbox color="primary" slot="end" (ionChange)="setCheckUseStory()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label> <ion-icon name="pencil-outline"></ion-icon> What is your story?</ion-label>
+    </ion-item>
+    <ion-item  lines="none">
+      <ion-textarea  style="cursor: url('../../assets/pencil.ico'), default!important;" placeholder="Type your story here..."  name="storyArea" rows="10" [(ngModel)]="story"></ion-textarea>
+    </ion-item>
+    <ion-item>
+        <ion-button class="buttonStyle" type="submit" color="primary"  (click)="uploadStoryAndSetUser()" expand="block">Wave the magic wand 🪄</ion-button>
+    </ion-item>
+  </form>
+</ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>
