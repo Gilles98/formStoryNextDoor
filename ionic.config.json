@@ -1,0 +1,7 @@
+{
+  "name": "StoryNextDoorForm",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
