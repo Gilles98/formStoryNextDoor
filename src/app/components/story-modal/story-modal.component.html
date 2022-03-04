@@ -1,0 +1,49 @@
+<ion-content>
+  <ion-fab vertical="top"  horizontal='start' slot='fixed' class="btnFloat">
+    <!--
+    Note that the path for the routerLink directive is by default relative
+    to the current page, the path of the current page is automatically added
+    in front of the path that is passed to the directive.
+
+    If a full path is required, the first element in the list should start with
+    a forward slash.
+    -->
+    <ion-fab-button class="btnFloat" (click)="destroy()" color="danger">
+      <ion-icon style=" font-size: 2em;  font-weight: bold; --ion-color-danger:  transparant;   animation: animate 4s  infinite!important;"  name="close-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="backgroundCard">
+          <img class="rotateImg" src="../../assets/20220223_202843.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle> Howdy!</ion-card-subtitle>
+            <ion-card-title>We are the <span class="coolText">Story Next Door</span> team</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            We focus our project around tackeling inequalities, by gathering stories about real people. <br/><br/>  After that we are going to translate them into the language of kids,
+            in the hopes that we can help them become more aware towards these real life social problems.
+
+            <br/><br/>
+            What if an individual tells you that it’s NOT okay to have freckles on your face, just because someone told them so.
+            <br/><br/>
+            What if you live in a country where they forbid people of the same sex to be married to one another, just because someone told them so.
+
+            <br/><br/>
+            It’s fine to have an opinion but it is also fine if someone else does not share that opinion.
+            And that’s why we want to challenge the taboos around them
+
+            <br/><br/>
+            The gathered stories will be presented as a fun, interactive and adventurous book for children to explore.
+            <br/><br/>
+            This way they can really connect themselves to the story in the best way possible, PLAYING!
+
+
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

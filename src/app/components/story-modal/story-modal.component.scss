@@ -1,0 +1,49 @@
+.backgroundCard{
+  background: #ddffef;
+}
+.btnFloat .button-native .button-inner{
+  --box-shadow: none;
+}
+@keyframes animate {
+  0% {
+    font-size: 2em;
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    font-size: 2.5em;
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    font-size: 3em;
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    font-size: 2.5em;
+    -webkit-transform: rotate3d(0, 0, 1, 270deg);
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    font-size: 2em;
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
+.rotateImg{
+  -webkit-transform:rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.coolText{
+  color: transparent;
+  font-size: larger;
+  background: linear-gradient(90deg, darkgoldenrod, goldenrod, goldenrod, darkgoldenrod);;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+}
