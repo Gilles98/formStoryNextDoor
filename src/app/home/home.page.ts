@@ -40,7 +40,7 @@ export class HomePage {
   uploadStoryAndSetUser(): void{
     let error = '';
     if (!this.email.includes('@')){
-      error += '- Make sure the email contains an @</br></br>';
+      error += '- Make sure the email contains  @</br></br>';
     }
     if (this.email === ''){
       error += '- The email field is empty </br></br>';
