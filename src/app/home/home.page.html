@@ -1,11 +1,12 @@
 
-<ion-content [fullscreen]="true" >
-<ion-grid class="ion-text-center background-image" >
+<ion-content [fullscreen]="true" class="background-image">
+<ion-grid class="ion-text-center " >
   <ion-row>
 <ion-col class="ion-align-self-center">
   <form class="formsDesign">
     <ion-item lines="full" >
-      <h2>Submit your story!</h2>
+      <h2>Submit your story! </h2>
+      <ion-button class="triggerModal" (click)="showModal()" slot="end"><ion-icon name="help-circle-outline" ></ion-icon></ion-button>
       <ion-label position="floating"><ion-icon name="mail-outline"></ion-icon> Fill in your e-mail!</ion-label>
       <ion-input [(ngModel)]="email" name="email" type="text" required></ion-input>
     </ion-item>

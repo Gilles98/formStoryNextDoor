@@ -5,6 +5,7 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
+    "upload": "ionic build && firebase deploy",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
