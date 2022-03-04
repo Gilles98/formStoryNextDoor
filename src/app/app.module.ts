@@ -10,6 +10,7 @@ import {provideFirebaseApp, initializeApp} from '@angular/fire/app';
 import {environment} from '../environments/environment';
 import {getAuth, provideAuth} from '@angular/fire/auth';
 import {enableIndexedDbPersistence, getFirestore, provideFirestore} from '@angular/fire/firestore';
+import { ServiceWorkerModule } from '@angular/service-worker';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,7 +23,13 @@ import {enableIndexedDbPersistence, getFirestore, provideFirestore} from '@angul
       return firestore;
     }),
     // Firebase authentication import.
-    provideAuth(() => getAuth())],
+    provideAuth(() => getAuth()),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

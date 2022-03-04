@@ -29,11 +29,11 @@ export class HomePage {
     if (this.email === ''){
       error += '- The email field is empty </br></br>';
     }
-    for (const character of this.email) {
+  /*  for (const character of this.email) {
       if (character === character.toUpperCase()){
         error += ' - An email should not include a character in uppercase </br></br>';
       }
-    }
+    }*/
     if (this.email.length < 4){
       error += ' - An email this short is not valid </br></br>';
     }
