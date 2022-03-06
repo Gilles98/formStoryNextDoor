@@ -6,11 +6,14 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import {provideFirebaseApp, initializeApp} from '@angular/fire/app';
+import {provideFirebaseApp, initializeApp, getApp} from '@angular/fire/app';
 import {environment} from '../environments/environment';
 import {getAuth, provideAuth} from '@angular/fire/auth';
 import {enableIndexedDbPersistence, getFirestore, provideFirestore} from '@angular/fire/firestore';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import {getAnalytics, provideAnalytics} from '@angular/fire/analytics';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -29,7 +32,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })],
+    }), AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAnalyticsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

@@ -3,6 +3,8 @@ import {StoryServiceService} from '../service/story-service.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AlertController, ModalController} from '@ionic/angular';
 import {StoryModalComponent} from '../components/story-modal/story-modal.component';
+import firebase from 'firebase/compat';
+import {AngularFireAnalytics} from '@angular/fire/compat/analytics';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +18,8 @@ export class HomePage {
   canUse = false;
   story: string;
 
-  constructor(public storyService: StoryServiceService, public alertController: AlertController, public modalController: ModalController) {
+  constructor(private analyticsHome: AngularFireAnalytics,
+              public storyService: StoryServiceService, public alertController: AlertController, public modalController: ModalController) {
   }
 
   ionViewDidLoad(): void{
@@ -69,6 +72,7 @@ if (error === ''){
       });
       await alert.present();
     });
+    await this.analyticsHome.logEvent(this.naam + ' has submitted a story');
     this.resetThisThing();
   });
 
